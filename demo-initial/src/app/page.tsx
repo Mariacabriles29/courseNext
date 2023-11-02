@@ -9,6 +9,7 @@ export default function HomePage() {
     <>
       <Navbar />
       <main className={styles.main}>
+        <h1>Home Page</h1>
         <h1>
           Ir a <Link href="/about">About</Link>
         </h1>
