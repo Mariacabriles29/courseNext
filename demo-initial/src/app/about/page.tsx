@@ -1,23 +1,30 @@
-import React from "react";
-import styles from "../page.module.css";
 import Link from "next/link";
-import Navbar from "@/components/Navbar";
+
+import { MainLayout } from "@/layouts/MainLayout";
+import { DarkLayout } from "@/layouts/DarkLayout";
+import { ReactElement } from "react";
+import { Main } from "next/document";
 
 export default function About() {
   return (
-    <>
-      <Navbar />
-      <main className={styles.main}>
+    <MainLayout>
+      <DarkLayout>
         <h1>About Page</h1>
-        <h1 className={styles.title}>
+        <h1 className={"title"}>
           Ir a <Link href="/">Home</Link>
         </h1>
 
-        <div className={styles.description}>
-          <p>Get started by editing&nbsp;</p>
-          <code className={styles.code}>src/app/about/page.tsx</code>
-        </div>
-      </main>
-    </>
+        <p className={"description"}>Get started by editing&nbsp;</p>
+        <code className={"code"}>src/app/about/page.tsx</code>
+      </DarkLayout>
+    </MainLayout>
   );
 }
+// About.getLayout = function getLayout(page: ReactElement) {
+//   // Puedes personalizar la función getLayout según tus necesidades
+//   return (
+//     <MainLayout>
+//       <DarkLayout>{page}</DarkLayout>;
+//     </MainLayout>
+//   );
+// };

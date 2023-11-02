@@ -2,9 +2,10 @@
     margin-right: 10px;
     margin-left: 15px;
     color:#0070f3;
-    text-decoration: underline;
+  
 }
 .active {
     pointer-events: none!important;
     color: gray!important; 
+    text-decoration:underline; 
   }

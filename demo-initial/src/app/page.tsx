@@ -1,25 +1,23 @@
 import Image from "next/image";
 
-import styles from "./page.module.css";
 import Link from "next/link";
-import Navbar from "@/components/Navbar";
+
+import { MainLayout } from "@/layouts/MainLayout";
 
 export default function HomePage() {
   return (
     <>
-      <Navbar />
-      <main className={styles.main}>
+      <MainLayout>
         <h1>Home Page</h1>
-        <h1>
+        <h1 className={"title"}>
           Ir a <Link href="/about">About</Link>
         </h1>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>src/app/page.tsx</code>
-          </p>
-        </div>
-      </main>
+
+        <p className={"description"}>
+          Get started by editing&nbsp;
+          <code className={"code"}>src/app/page.tsx</code>
+        </p>
+      </MainLayout>
     </>
   );
 }
