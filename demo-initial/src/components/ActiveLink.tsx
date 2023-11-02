@@ -1,14 +1,21 @@
-import Link from "next/link";
-import { useRouter } from "next/router";
+"use client";
 
-interface props {
-  href: string;
-  text?: string;
-}
+import Link, { LinkProps } from "next/link";
+import { usePathname } from "next/navigation"; // usePathname is a hook now imported from navigation
+import styles from "../components/Navbar.module.css";
+const ActiveLink = ({
+  children,
+  ...rest
+}: { children: React.ReactNode } & LinkProps) => {
+  const { href } = rest;
+  const pathName = usePathname();
 
-export const ActiveLink = ({ href, text }: props) => {
+  const isActive = pathName === href;
   return (
-    /*El componente active link se crea para manejar mejor cada link que tengo en el navbar  aqui desestruturo las props para poder usarlas en el otro componente*/
-    <Link href={href}>{text}</Link>
+    <Link {...rest} className={isActive ? styles.active : ""}>
+      {children}
+    </Link>
   );
 };
+
+export default ActiveLink;

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import styles from "./page.module.css";
 import Link from "next/link";
-import { Navbar } from "@/components/Navbar";
+import Navbar from "@/components/Navbar";
 
 export default function HomePage() {
   return (
@@ -16,7 +16,7 @@ export default function HomePage() {
         <div className={styles.description}>
           <p>
             Get started by editing&nbsp;
-            {/* <code className={styles.code}>src/app/page.tsx</code> */}
+            <code className={styles.code}>src/app/page.tsx</code>
           </p>
         </div>
       </main>

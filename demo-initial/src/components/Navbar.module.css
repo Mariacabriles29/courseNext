@@ -4,3 +4,7 @@
     color:#0070f3;
     text-decoration: underline;
 }
+.active {
+    pointer-events: none!important;
+    color: gray!important; 
+  }
